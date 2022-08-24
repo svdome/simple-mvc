@@ -12,7 +12,7 @@ class Registry
 
     public function setProperty($name, $value)
     {
-        self::$properties[$name]=$value;
+        self::$properties[$name] = $value;
     }
 
     public function getProperty($name)
