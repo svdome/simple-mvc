@@ -2,20 +2,13 @@
 
 namespace core;
 /*
-*Класс реестр (реализует паттерн Реестр для управления настройками фреймворка)
-*/
+ *Класс реестр (реализует паттерн Реестр для управления настройками фреймворка)
+ */
 class Registry
 {
-    private static ?self $instance;
+    use TSingleton;
 
-    private function __construct() {}
-
-    public static function getInstance()
-    {
-        return self::$instance ?? new static();
-    }
-
-    private static array $properties =[];
+    private static array $properties = [];
 
     public function setProperty($name, $value)
     {
