@@ -1,8 +1,9 @@
 <?php
 
 use core\App;
-require_once dirname(__DIR__) . 'config/init.php';
+
+require_once dirname(__DIR__) . '/config/init.php';
 
 
 new App();
-var_dump(APP::$app->getProperties());
+var_dump(App::$app->getProperties());
