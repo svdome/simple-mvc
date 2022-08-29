@@ -7,7 +7,7 @@ echo "<!DOCTYPE html PUBLIC \"-//W3C//DTD HTML 4.01 Transitional//EN\" \"http://
 <title>Open Server</title>
 </head>
 <body>
-<div><img style=\"width:100%; height:auto;\" src=\"/errors/error_img/404.jpg\"></div>
+<div><img style=\"width:100%; height:auto;\" src=\"/public/errors/error_img/404.jpg\"></div>
 <div style=\"margin-top: -40%\">
 <center>
 <br><br><br><div style=\"width: 600px;\"><span style=\"font-size: 100px; color: red; font-family: Arial, Verdana;\">Ошибка 404!</span>
