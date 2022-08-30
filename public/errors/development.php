@@ -1,6 +1,5 @@
 <?php
 
-
 echo "<!DOCTYPE html> 
 <html>
 <head>
@@ -9,11 +8,10 @@ echo "<!DOCTYPE html>
 </head>
 <body>
 <div><img style=\"width:100%; height:100%;\" src=\"/public/errors/error_img/dev.jpg\"></div>
-<div style=\"margin-top: -50%\">
+<div style=\"margin-top: -40%\">
 
 <br><br><br><div style=\"width: 600px;\"><span style=\"font-size: 32px; color: red; font-family: Arial, Verdana;\">"
 ?>Код ошибки:
-
 <?"</span>
 </div>
 </body>
