@@ -47,6 +47,22 @@ class Router
         return self::$currentRoute;
     }
 
+
+    /**
+     * метод по отсечению get-параметров
+     * @param $url
+     * @return void
+     */
+    protected static function removeGetParams($url)
+    {
+        if($url) {
+            $params = explode('&', $url, 2);
+            if(false === str_contains($params[0], '=')) {
+                return rtrim($params[0], '/');
+            }
+        }
+    }
+
     /**
      * метод для вызова нужного метода контроллера согласно таблицы маршрутов
      * @param $url - кусок адресной строки относительно корня проекта
@@ -55,6 +71,7 @@ class Router
      */
     public static function dispatch($url) // непосредственная маршрутизация
     {
+        $url=self::removeGetParams($url);
         //echo $url;
         if(self::matchRoutes($url)) {
             $controller = 'app\controllers\\' . self::$currentRoute['admin_prefix'] . self::$currentRoute['controller'] . 'Controller';
@@ -62,6 +79,7 @@ class Router
                 $controllerObject = new $controller(self::$currentRoute);
                 $action = self::$currentRoute['action'] . 'Action';
                 if(method_exists($controllerObject, $action)) {
+                    $controllerObject->$action();
                     $controllerObject->$action();
                 } else {
                     throw new \Exception("Метод {$controller}::{$action} не найден", 404);

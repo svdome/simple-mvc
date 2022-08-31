@@ -1,0 +1,12 @@
+[Wednesday 3129 of August 2022 06:36:29 PM]Ошибка: Страница не найдена | Файл: C:\OpenServer\domains\simple-mvc\vendor\core\Router.php | Строка 73
+
+[Wednesday 3149 of August 2022 06:36:49 PM]Ошибка: Метод app\controllers\MainController::testAction не найден | Файл: C:\OpenServer\domains\simple-mvc\vendor\core\Router.php | Строка 67
+
+[Wednesday 3128 of August 2022 07:15:28 PM]Ошибка: Страница не найдена | Файл: C:\OpenServer\domains\simple-mvc\vendor\core\Router.php | Строка 73
+
+[Wednesday 3143 of August 2022 07:52:43 PM]Ошибка: Call to undefined function core\str_contains() | Файл: C:\OpenServer\domains\simple-mvc\vendor\core\Router.php | Строка 60
+
+[Wednesday 3158 of August 2022 08:09:58 PM]Ошибка: Call to undefined function core\str_contains() | Файл: C:\OpenServer\domains\simple-mvc\vendor\core\Router.php | Строка 60
+
+[Wednesday 3100 of August 2022 08:10:00 PM]Ошибка: Call to undefined function core\str_contains() | Файл: C:\OpenServer\domains\simple-mvc\vendor\core\Router.php | Строка 60
+
