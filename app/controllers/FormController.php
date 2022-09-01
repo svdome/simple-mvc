@@ -8,7 +8,7 @@ class FormController extends Controller
 {
     public function authAction()
     {
-        echo 'Это форма авторизации.';
-        debag($this->route);
+        $this->setData(['name'=>'admin', 'birthdata' => '08.06.1992']);
+        $this->setMeta('Форма авторизации', 'Описание страницы формы авторизации', 'Форма, авторизация...');
     }
 }

@@ -49,7 +49,7 @@ class Router
 
 
     /**
-     * метод по отсечению get-параметров
+     * метод по отсечению запросов от get-параметров для избежания ошибок
      * @param $url
      * @return void
      */
@@ -60,7 +60,9 @@ class Router
             if(false === str_contains($params[0], '=')) {
                 return rtrim($params[0], '/');
             }
+            return '';
         }
+        return $url;
     }
 
     /**
@@ -77,10 +79,11 @@ class Router
             $controller = 'app\controllers\\' . self::$currentRoute['admin_prefix'] . self::$currentRoute['controller'] . 'Controller';
             if(class_exists($controller)) {
                 $controllerObject = new $controller(self::$currentRoute);
+                $controllerObject->getModel();
                 $action = self::$currentRoute['action'] . 'Action';
                 if(method_exists($controllerObject, $action)) {
                     $controllerObject->$action();
-                    $controllerObject->$action();
+                    $controllerObject->getView();
                 } else {
                     throw new \Exception("Метод {$controller}::{$action} не найден", 404);
                 }
