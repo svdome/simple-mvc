@@ -10,3 +10,9 @@
 
 [Wednesday 3100 of August 2022 08:10:00 PM]Ошибка: Call to undefined function core\str_contains() | Файл: C:\OpenServer\domains\simple-mvc\vendor\core\Router.php | Строка 60
 
+[Wednesday 3152 of August 2022 09:00:52 PM]Ошибка: Call to undefined function core\str_contains() | Файл: C:\OpenServer\domains\simple-mvc\vendor\core\Router.php | Строка 60
+
+[Sunday 425 of September 2022 05:15:25 PM]Ошибка: syntax error, unexpected '|', expecting variable (T_VARIABLE) | Файл: C:\OpenServer\domains\simple-mvc\vendor\core\Controller.php | Строка 25
+
+[Sunday 404 of September 2022 05:17:04 PM]Ошибка: Call to undefined function core\str_contains() | Файл: C:\OpenServer\domains\simple-mvc\vendor\core\Router.php | Строка 60
+
