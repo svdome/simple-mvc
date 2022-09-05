@@ -6,8 +6,10 @@ use core\Controller;
 
 class MainController extends Controller
 {
+    public string $view = 'own';
     public function indexAction()
     {
-        echo __METHOD__;
+        //echo __METHOD__;
+        $this->setMeta('Стартовая страница');
     }
 }

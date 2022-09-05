@@ -1,18 +1,18 @@
-[Wednesday 3129 of August 2022 06:36:29 PM]Ошибка: Страница не найдена | Файл: C:\OpenServer\domains\simple-mvc\vendor\core\Router.php | Строка 73
+[Monday 537 of September 2022 07:26:37 PM]Ошибка: Call to undefined function core\str_contains() | Файл: C:\OpenServer\domains\simple-mvc\vendor\core\Router.php | Строка 60
 
-[Wednesday 3149 of August 2022 06:36:49 PM]Ошибка: Метод app\controllers\MainController::testAction не найден | Файл: C:\OpenServer\domains\simple-mvc\vendor\core\Router.php | Строка 67
+[Monday 509 of September 2022 07:27:09 PM]Ошибка: Call to undefined function core\str_contains() | Файл: C:\OpenServer\domains\simple-mvc\vendor\core\Router.php | Строка 60
 
-[Wednesday 3128 of August 2022 07:15:28 PM]Ошибка: Страница не найдена | Файл: C:\OpenServer\domains\simple-mvc\vendor\core\Router.php | Строка 73
+[Monday 555 of September 2022 07:34:55 PM]Ошибка: Call to undefined function core\str_contains() | Файл: C:\OpenServer\domains\simple-mvc\vendor\core\Router.php | Строка 60
 
-[Wednesday 3143 of August 2022 07:52:43 PM]Ошибка: Call to undefined function core\str_contains() | Файл: C:\OpenServer\domains\simple-mvc\vendor\core\Router.php | Строка 60
+[Monday 551 of September 2022 07:47:51 PM]Ошибка: Call to undefined function core\str_contains() | Файл: C:\OpenServer\domains\simple-mvc\vendor\core\Router.php | Строка 60
 
-[Wednesday 3158 of August 2022 08:09:58 PM]Ошибка: Call to undefined function core\str_contains() | Файл: C:\OpenServer\domains\simple-mvc\vendor\core\Router.php | Строка 60
+[Monday 547 of September 2022 08:10:47 PM]Ошибка: Call to undefined function core\str_contains() | Файл: C:\OpenServer\domains\simple-mvc\vendor\core\Router.php | Строка 60
 
-[Wednesday 3100 of August 2022 08:10:00 PM]Ошибка: Call to undefined function core\str_contains() | Файл: C:\OpenServer\domains\simple-mvc\vendor\core\Router.php | Строка 60
+[Monday 549 of September 2022 08:10:49 PM]Ошибка: Call to undefined function core\str_contains() | Файл: C:\OpenServer\domains\simple-mvc\vendor\core\Router.php | Строка 60
 
-[Wednesday 3152 of August 2022 09:00:52 PM]Ошибка: Call to undefined function core\str_contains() | Файл: C:\OpenServer\domains\simple-mvc\vendor\core\Router.php | Строка 60
+[Monday 503 of September 2022 08:18:03 PM]Ошибка: Call to undefined function core\str_contains() | Файл: C:\OpenServer\domains\simple-mvc\vendor\core\Router.php | Строка 60
 
-[Sunday 425 of September 2022 05:15:25 PM]Ошибка: syntax error, unexpected '|', expecting variable (T_VARIABLE) | Файл: C:\OpenServer\domains\simple-mvc\vendor\core\Controller.php | Строка 25
+[Monday 520 of September 2022 08:47:20 PM]Ошибка: Call to undefined function core\str_contains() | Файл: C:\OpenServer\domains\simple-mvc\vendor\core\Router.php | Строка 60
 
-[Sunday 404 of September 2022 05:17:04 PM]Ошибка: Call to undefined function core\str_contains() | Файл: C:\OpenServer\domains\simple-mvc\vendor\core\Router.php | Строка 60
+[Monday 522 of September 2022 08:47:22 PM]Ошибка: Call to undefined function core\str_contains() | Файл: C:\OpenServer\domains\simple-mvc\vendor\core\Router.php | Строка 60
 

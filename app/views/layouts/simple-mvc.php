@@ -11,6 +11,6 @@ use core\View;
     <?=$this->getMeta();?>
 </head>
 <body>
-    <?= $this->content; ?>
+    <?=$this->content; ?>
 </body>
 </html>

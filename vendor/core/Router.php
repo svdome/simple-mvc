@@ -104,6 +104,7 @@ class Router
      */
     public static function matchRoutes($url) : bool
     {
+
         foreach (self::$routes as $pattern => $route) {
             if (preg_match("#{$pattern}#", $url, $matches)) {
                 foreach ($matches as $key => $value) {

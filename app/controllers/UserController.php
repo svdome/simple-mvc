@@ -4,9 +4,9 @@ namespace app\controllers;
 
 use core\Controller;
 
-class FormController extends Controller
+class UserController extends Controller
 {
-    public function authAction()
+    public function getallAction()
     {
         $res = R::findAll('names');
         $data =[];
