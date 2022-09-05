@@ -33,13 +33,13 @@ abstract class Controller
      * @var object
      */
     public object $model;
-    //public $route = [];
+
 
     /**
      * конструктор
      * @param $route - текущий маршрут, прокидываем из Router
      */
-    public function __construct(public $route = [])
+    public function __construct(public $route= [])
     {
 
     }
@@ -63,7 +63,7 @@ abstract class Controller
     public function getView()
     {
         $this->view = $this->view ?: $this->route['action'];
-        (new View($this->route, $this->layout, $this->view, $this-> meta))->render($this->data);
+        (new View($this->route, $this->layout, $this->view, $this->meta))->render($this->data);
     }
 
     /**
@@ -86,9 +86,9 @@ abstract class Controller
     public function setMeta($title = '', $description = '', $keywords = '')
     {
         $this->meta = [
-          'title'=>$title,
-          'description'=>$description,
-          'keywords'=>$keywords,
+            'title'=>$title,
+            'description'=>$description,
+            'keywords'=>$keywords
         ];
     }
 }
