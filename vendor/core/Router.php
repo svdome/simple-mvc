@@ -26,7 +26,7 @@ class Router
      * @return void
      */
     public static function add($regexp, $route = []) {
-        self::$routes[$regexp]=$route; //self- оперирование статическими свойствами вместо this  в динамических
+        self::$routes[$regexp]= $route; //self- оперирование статическими свойствами вместо this  в динамических
     }
 
     /**
@@ -73,7 +73,7 @@ class Router
      */
     public static function dispatch($url) // непосредственная маршрутизация
     {
-        $url=self::removeGetParams($url);
+        $url= self::removeGetParams($url);
         //echo $url;
         if(self::matchRoutes($url)) {
             $controller = 'app\controllers\\' . self::$currentRoute['admin_prefix'] . self::$currentRoute['controller'] . 'Controller';

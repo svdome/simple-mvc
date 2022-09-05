@@ -8,7 +8,7 @@ require_once CONFIG . '/routes.php';
 
 new App();
 
-//var_dump(APP::$app->getProperties());
+var_dump(APP::$app->getProperties());
 
 //echo $noarr['null'];
 

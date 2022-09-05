@@ -42,11 +42,10 @@ class View
         if(is_array($data)) {
             extract($data);
         }
-
         $prefix = str_replace('\\', '/', $this->route['admin_prefix']);
         $view_file = APP . "/views/{$prefix}{$this->route['controller']}/{$this->view}.php";
         if(is_file($view_file)) {
-            ob_start();
+            ob_start(); //буферизация
             require_once $view_file;
             $this->content = ob_get_clean();
         } else {
