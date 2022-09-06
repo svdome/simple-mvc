@@ -4,9 +4,11 @@ namespace core;
 
 use RedBeanPHP\R;
 
+
 class DataBaseConnection
 {
     use TSingleton;
+
 
     private function __construct()
     {
