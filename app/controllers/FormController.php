@@ -3,6 +3,7 @@
 namespace app\controllers;
 
 use core\Controller;
+use RedBeanPHP\R;
 
 class FormController extends Controller
 {
@@ -15,7 +16,7 @@ class FormController extends Controller
         }
         //debug($data);
         //die();
-        $this->setData(['name'=>'Admin', 'birthdate'=>'08.06.1992']);
+        $this->setData($data);
         $this->setMeta('Форма авторизации', 'Описание страницы формы авторизации', 'Форма, авторизация...');
     }
 }

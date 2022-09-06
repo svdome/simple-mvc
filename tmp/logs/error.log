@@ -16,3 +16,85 @@
 
 [Monday 522 of September 2022 08:47:22 PM]Ошибка: Call to undefined function core\str_contains() | Файл: C:\OpenServer\domains\simple-mvc\vendor\core\Router.php | Строка 60
 
+[Tuesday 641 of September 2022 12:11:41 PM]Ошибка: Страница не найдена | Файл: C:\OpenServer\domains\simple-mvc\vendor\core\Router.php | Строка 94
+
+[Tuesday 651 of September 2022 12:11:51 PM]Ошибка: Class "RedBeanPHP\R" not found | Файл: C:\OpenServer\domains\simple-mvc\vendor\core\DataBaseConnection.php | Строка 14
+
+[Tuesday 619 of September 2022 12:52:19 PM]Ошибка: Class "RedBeanPHP\R" not found | Файл: C:\OpenServer\domains\simple-mvc\vendor\core\DataBaseConnection.php | Строка 14
+
+[Tuesday 625 of September 2022 12:52:25 PM]Ошибка: Class "RedBeanPHP\R" not found | Файл: C:\OpenServer\domains\simple-mvc\vendor\core\DataBaseConnection.php | Строка 14
+
+[Tuesday 632 of September 2022 01:44:32 PM]Ошибка: Class "RedBeanPHP\R" not found | Файл: C:\OpenServer\domains\simple-mvc\vendor\core\DataBaseConnection.php | Строка 14
+
+[Tuesday 628 of September 2022 02:17:28 PM]Ошибка: Class "app\controllers\R" not found | Файл: C:\OpenServer\domains\simple-mvc\app\controllers\FormController.php | Строка 11
+
+[Tuesday 620 of September 2022 02:26:20 PM]Ошибка: Class "RedBeanPHP\R" not found | Файл: C:\OpenServer\domains\simple-mvc\vendor\core\DataBaseConnection.php | Строка 19
+
+[Tuesday 640 of September 2022 02:32:40 PM]Ошибка: Class "RedBeanPHP\R" not found | Файл: C:\OpenServer\domains\simple-mvc\vendor\core\DataBaseConnection.php | Строка 19
+
+[Tuesday 653 of September 2022 02:33:53 PM]Ошибка: Class "RedBeanPHP\R" not found | Файл: C:\OpenServer\domains\simple-mvc\vendor\core\DataBaseConnection.php | Строка 19
+
+[Tuesday 636 of September 2022 02:42:36 PM]Ошибка: Class "RedBeanPHP\R" not found | Файл: C:\OpenServer\domains\simple-mvc\vendor\core\DataBaseConnection.php | Строка 19
+
+[Tuesday 627 of September 2022 03:07:27 PM]Ошибка: Class "RedBeanPHP\R" not found | Файл: C:\OpenServer\domains\simple-mvc\vendor\core\DataBaseConnection.php | Строка 19
+
+[Tuesday 610 of September 2022 03:10:10 PM]Ошибка: Class "RedBeanPHP\R" not found | Файл: C:\OpenServer\domains\simple-mvc\vendor\core\DataBaseConnection.php | Строка 19
+
+[Tuesday 614 of September 2022 03:12:14 PM]Ошибка: Class "RedBeanPHP\R" not found | Файл: C:\OpenServer\domains\simple-mvc\vendor\core\DataBaseConnection.php | Строка 19
+
+[Tuesday 619 of September 2022 03:12:19 PM]Ошибка: Class "RedBeanPHP\R" not found | Файл: C:\OpenServer\domains\simple-mvc\vendor\core\DataBaseConnection.php | Строка 19
+
+[Tuesday 635 of September 2022 03:12:35 PM]Ошибка: Class "RedBeanPHP\R" not found | Файл: C:\OpenServer\domains\simple-mvc\vendor\core\DataBaseConnection.php | Строка 19
+
+[Tuesday 639 of September 2022 03:12:39 PM]Ошибка: Class "RedBeanPHP\R" not found | Файл: C:\OpenServer\domains\simple-mvc\vendor\core\DataBaseConnection.php | Строка 19
+
+[Tuesday 606 of September 2022 03:13:06 PM]Ошибка: Class "RedBeanPHP\R" not found | Файл: C:\OpenServer\domains\simple-mvc\vendor\core\DataBaseConnection.php | Строка 19
+
+[Tuesday 610 of September 2022 03:13:10 PM]Ошибка: Class "RedBeanPHP\R" not found | Файл: C:\OpenServer\domains\simple-mvc\vendor\core\DataBaseConnection.php | Строка 19
+
+[Tuesday 612 of September 2022 03:13:12 PM]Ошибка: Class "RedBeanPHP\R" not found | Файл: C:\OpenServer\domains\simple-mvc\vendor\core\DataBaseConnection.php | Строка 19
+
+[Tuesday 647 of September 2022 03:15:47 PM]Ошибка: Class "RedBeanPHP\R" not found | Файл: C:\OpenServer\domains\simple-mvc\vendor\core\DataBaseConnection.php | Строка 19
+
+[Tuesday 651 of September 2022 03:15:51 PM]Ошибка: Class "RedBeanPHP\R" not found | Файл: C:\OpenServer\domains\simple-mvc\vendor\core\DataBaseConnection.php | Строка 19
+
+[Tuesday 615 of September 2022 03:16:15 PM]Ошибка: Class "RedBeanPHP\R" not found | Файл: C:\OpenServer\domains\simple-mvc\vendor\core\DataBaseConnection.php | Строка 16
+
+[Tuesday 631 of September 2022 03:20:31 PM]Ошибка: Class "RedBeanPHP\R" not found | Файл: C:\OpenServer\domains\simple-mvc\vendor\core\DataBaseConnection.php | Строка 16
+
+[Tuesday 635 of September 2022 03:20:35 PM]Ошибка: Class "RedBeanPHP\R" not found | Файл: C:\OpenServer\domains\simple-mvc\vendor\core\DataBaseConnection.php | Строка 16
+
+[Tuesday 632 of September 2022 03:21:32 PM]Ошибка: Class "RedBeanPHP\R" not found | Файл: C:\OpenServer\domains\simple-mvc\vendor\core\DataBaseConnection.php | Строка 16
+
+[Tuesday 606 of September 2022 03:24:06 PM]Ошибка: Class "RedBeanPHP\R" not found | Файл: C:\OpenServer\domains\simple-mvc\vendor\core\DataBaseConnection.php | Строка 16
+
+[Tuesday 659 of September 2022 03:24:59 PM]Ошибка: Class "RedBeanPHP\R" not found | Файл: C:\OpenServer\domains\simple-mvc\vendor\core\DataBaseConnection.php | Строка 16
+
+[Tuesday 603 of September 2022 06:21:03 PM]Ошибка: Страница не найдена | Файл: C:\OpenServer\domains\simple-mvc\vendor\core\Router.php | Строка 94
+
+[Tuesday 605 of September 2022 06:21:05 PM]Ошибка: Class "RedBeanPHP\R" not found | Файл: C:\OpenServer\domains\simple-mvc\vendor\core\DataBaseConnection.php | Строка 16
+
+[Tuesday 655 of September 2022 06:21:55 PM]Ошибка: Class "RedBeanPHP\R" not found | Файл: C:\OpenServer\domains\simple-mvc\vendor\core\DataBaseConnection.php | Строка 16
+
+[Tuesday 601 of September 2022 06:38:01 PM]Ошибка: Class "RedBeanPHP\R" not found | Файл: C:\OpenServer\domains\simple-mvc\vendor\core\DataBaseConnection.php | Строка 16
+
+[Tuesday 634 of September 2022 06:59:34 PM]Ошибка: Class "RedBeanPHP\R" not found | Файл: C:\OpenServer\domains\simple-mvc\vendor\core\DataBaseConnection.php | Строка 16
+
+[Tuesday 638 of September 2022 06:59:38 PM]Ошибка: Class "RedBeanPHP\R" not found | Файл: C:\OpenServer\domains\simple-mvc\vendor\core\DataBaseConnection.php | Строка 16
+
+[Tuesday 605 of September 2022 07:02:05 PM]Ошибка: Class "RedBeanPHP\R" not found | Файл: C:\OpenServer\domains\simple-mvc\vendor\core\DataBaseConnection.php | Строка 16
+
+[Tuesday 656 of September 2022 07:22:56 PM]Ошибка: Class "RedBeanPHP\R" not found | Файл: C:\OpenServer\domains\simple-mvc\vendor\core\DataBaseConnection.php | Строка 16
+
+[Tuesday 659 of September 2022 07:22:59 PM]Ошибка: Undefined array key 1 | Файл: C:\OpenServer\domains\simple-mvc\vendor\core\Router.php | Строка 108
+
+[Tuesday 604 of September 2022 07:23:04 PM]Ошибка: Class "RedBeanPHP\R" not found | Файл: C:\OpenServer\domains\simple-mvc\vendor\core\DataBaseConnection.php | Строка 16
+
+[Tuesday 607 of September 2022 07:23:07 PM]Ошибка: Class "RedBeanPHP\R" not found | Файл: C:\OpenServer\domains\simple-mvc\vendor\core\DataBaseConnection.php | Строка 16
+
+[Tuesday 610 of September 2022 07:23:10 PM]Ошибка: Undefined array key 1 | Файл: C:\OpenServer\domains\simple-mvc\vendor\core\Router.php | Строка 108
+
+[Tuesday 648 of September 2022 07:23:48 PM]Ошибка: Class "RedBeanPHP\R" not found | Файл: C:\OpenServer\domains\simple-mvc\vendor\core\DataBaseConnection.php | Строка 16
+
+[Tuesday 650 of September 2022 07:23:50 PM]Ошибка: Class "RedBeanPHP\R" not found | Файл: C:\OpenServer\domains\simple-mvc\vendor\core\DataBaseConnection.php | Строка 16
+

@@ -60,7 +60,7 @@ abstract class Controller
      * метод получения нашего вида
      * @return void
      */
-    public function getView()
+    public function getView(): void
     {
         $this->view = $this->view ?: $this->route['action'];
         (new View($this->route, $this->layout, $this->view, $this->meta))->render($this->data);

@@ -8,10 +8,10 @@ class App
 
     public function __construct()
     {
+        $url = trim(urldecode($_SERVER['QUERY_STRING']), '/'); //получение адрессной строки с отрезанием "/"
         new ErrorHandler();
         self::$app = Registry::getInstance();
         $this->getParams();
-        $url = trim(urldecode($_SERVER['QUERY_STRING']), '/'); //получение адрессной строки с отрезанием "/"
         Router::dispatch($url);
     }
 

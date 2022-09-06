@@ -58,7 +58,7 @@ class Router
         if($url) {
             $params = explode('&', $url, 2);
             if(false === str_contains($params[0], '=')) {
-                return rtrim($params[0], '/');
+                return $params;
             }
             return '';
         }
@@ -104,13 +104,19 @@ class Router
      */
     public static function matchRoutes($url) : bool
     {
-
+        if(is_array($url)) {
+            $getParam= $url[1];
+            $url= rtrim($url[0], "/");
+        }
         foreach (self::$routes as $pattern => $route) {
             if (preg_match("#{$pattern}#", $url, $matches)) {
                 foreach ($matches as $key => $value) {
                     if(is_string($key)) {
                         $route[$key] = $value;
                     }
+                }
+                if(isset($getParam)) {
+                    $route['get_param']= $getParam;
                 }
                 if (empty($route['action'])) {
                     $route['action'] = 'index';
@@ -136,10 +142,10 @@ class Router
      */
     protected static function upperCamelCase($name)
     {
-        //$test1 = str_replace('-', ' ', $name);
+        //$test1 = str_replace('-', '', $name);
         //$test2 = ucwords($test1);
         //$test3 = str_replace(' ', '', $test2);
-        return str_replace(' ', '', ucwords(str_replace('-', ' ', $name)));
+        return str_replace('', '', ucwords(str_replace('-', ' ', $name)));
     }
 
     /**

@@ -37,7 +37,7 @@ class View
      * @return void
      * @throws \Exception
      */
-    public function render($data)
+    public function render($data): void
     {
         if(is_array($data)) {
             extract($data);

@@ -10,6 +10,6 @@ class MainController extends Controller
     public function indexAction()
     {
         //echo __METHOD__;
-        $this->setMeta('Стартовая страница');
+        $this->setMeta('Стартовая страница', 'Описание страницы', 'Страница...' );
     }
 }
