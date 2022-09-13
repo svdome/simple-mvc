@@ -2,62 +2,62 @@
 
 namespace core;
 
+
 /**
  * Класс маршрутизации
  */
 class Router
 {
-
     /**
-     * таблица маршрутов(ключ-шаблон regexp, значение-массив добавляемого маршрута)
+     * Таблица маршрутов (ключ - шаблон regexp, значение - массив добавляемого маршрута)
      * @var array
      */
     protected static array $routes = [];
-    /**
-     * текущий маршрут
-     * @var array
-     */
-    protected static array $currentRoute = []; //текущий маршрут
 
     /**
-     * Метод для добавления маршрутов в таблицу маршрутов
+     * Текущий маршрут
+     * @var array
+     */
+    protected static array $currentRoute = [];
+
+    /**
+     * Метод для добавления маршрута в таблицу маршрутов
      * @param $regexp - шаблон регулярного выражения
      * @param $route - маршрут
      * @return void
      */
     public static function add($regexp, $route = []) {
-        self::$routes[$regexp]= $route; //self- оперирование статическими свойствами вместо this  в динамических
+        self::$routes[$regexp] = $route;
     }
 
     /**
-     * метод получения таблицы маршрутов
+     * Метод получения таблицы маршрутов
      * @return array
      */
-    public static function getRoutes() : array //метод получения всех маршрутов. array-указания типа данных который возвращается
+    public static function getRoutes() : array
     {
-        return self::$routes; //возврат таблицы маршрутов
+        return self::$routes;
     }
 
     /**
-     * метод получения текущего маршрута
+     * Метод получения текущего маршрута
      * @return array
      */
-    public static function getRoute() : array //метод по получению текущего маршрута
+    public static function getRoute() : array
     {
         return self::$currentRoute;
     }
 
-
     /**
-     * метод по отсечению запросов от get-параметров для избежания ошибок
+     * Отсекаем от запроса GET-параметр для избежания ошибок
      * @param $url
-     * @return void
+     * @return mixed|string
      */
     protected static function removeGetParams($url)
     {
-        if($url) {
+        if ($url) {
             $params = explode('&', $url, 2);
-            if(false === str_contains($params[0], '=')) {
+            if (false === str_contains($params[0], '=')) {
                 return $params;
             }
             return '';
@@ -66,22 +66,20 @@ class Router
     }
 
     /**
-     * метод для вызова нужного метода контроллера согласно таблицы маршрутов
+     * Метод для вызова нужного метода контроллера согласно таблице маршрутов
      * @param $url - кусок адресной строки относительно корня проекта
      * @return void
-     * @throws \Exception
      */
-    public static function dispatch($url) // непосредственная маршрутизация
+    public static function dispatch($url)
     {
-        $url= self::removeGetParams($url);
-        //echo $url;
-        if(self::matchRoutes($url)) {
+        $url = self::removeGetParams($url);
+        if (self::matchRoutes($url)) {
             $controller = 'app\controllers\\' . self::$currentRoute['admin_prefix'] . self::$currentRoute['controller'] . 'Controller';
-            if(class_exists($controller)) {
+            if (class_exists($controller)) {
                 $controllerObject = new $controller(self::$currentRoute);
                 $controllerObject->getModel();
                 $action = self::$currentRoute['action'] . 'Action';
-                if(method_exists($controllerObject, $action)) {
+                if (method_exists($controllerObject, $action)) {
                     $controllerObject->$action();
                     $controllerObject->getView();
                 } else {
@@ -93,35 +91,35 @@ class Router
         } else {
             throw new \Exception("Страница не найдена", 404);
         }
-
-        //debug(self::getRoutes());
     }
 
     /**
-     * метод для поиска совпадения url с таблицей маршрутов и перенаправления на соответствующий контроллер
+     * Метод для поиска совпадения url с таблицей маршрутов и перенаправления на соответствующий controller
      * @param $url - текущий запрос
      * @return bool
      */
     public static function matchRoutes($url) : bool
     {
-        if(is_array($url)) {
-            $getParam= $url[1];
-            $url= rtrim($url[0], "/");
+        if (is_array($url)) {
+            if (isset($url[1])) {
+                $getParam = $url[1];
+            }
+            $url = rtrim($url[0], "/");
         }
         foreach (self::$routes as $pattern => $route) {
             if (preg_match("#{$pattern}#", $url, $matches)) {
                 foreach ($matches as $key => $value) {
-                    if(is_string($key)) {
+                    if (is_string($key)) {
                         $route[$key] = $value;
                     }
                 }
-                if(isset($getParam)) {
-                    $route['get_param']= $getParam;
+                if (isset($getParam)) {
+                    $route['get_param'] = $getParam;
                 }
                 if (empty($route['action'])) {
                     $route['action'] = 'index';
                 }
-                if(!isset($route['admin_prefix'])) {
+                if (!isset($route['admin_prefix'])) {
                     $route['admin_prefix'] = '';
                 } else {
                     $route['admin_prefix'] .= '\\';
@@ -136,20 +134,17 @@ class Router
     }
 
     /**
-     * метод для преведения строки к upperCamelCase
+     * Метод для преведения строки к upperCamelCase
      * @param $name - строка
      * @return array|string|string[]
      */
     protected static function upperCamelCase($name)
     {
-        //$test1 = str_replace('-', '', $name);
-        //$test2 = ucwords($test1);
-        //$test3 = str_replace(' ', '', $test2);
-        return str_replace('', '', ucwords(str_replace('-', ' ', $name)));
+        return str_replace(' ', '', ucwords(str_replace('-', ' ', $name)));
     }
 
     /**
-     * метод для преведения строки к lowerCamelCase
+     * Метод для преведения строки к lowerCamelCase
      * @param $name - строка
      * @return string
      */
@@ -157,4 +152,4 @@ class Router
     {
         return lcfirst(self::upperCamelCase($name));
     }
- }
+}

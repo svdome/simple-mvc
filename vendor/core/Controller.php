@@ -3,49 +3,51 @@
 namespace core;
 
 /**
- * базовый сласс контроллера
+ * Базовый класс контроллера
  */
 abstract class Controller
 {
     /**
-     * массив с данными для передачи в вид
+     * Массив с данными для передачи в вид
      * @var array
      */
     public array $data = [];
 
     /**
-     * массив с метаданными страницы
+     * Массив с метаданными страницы
      * @var array
      */
     public array $meta = [];
+
     /**
-     * название шаблона страницы
+     * Название шаблона страницы
      * @var false|string
      */
     public false|string $layout = '';
+
     /**
-     * название вида
+     * Название вида
      * @var string
      */
     public string $view = '';
+
     /**
-     * объект модели для текущего контроллера
+     * Объект модели для текущего контрллера
      * @var object
      */
     public object $model;
 
-
     /**
-     * конструктор
+     *
      * @param $route - текущий маршрут, прокидываем из Router
      */
-    public function __construct(public $route= [])
+    public function __construct(public $route = [])
     {
 
     }
 
     /**
-     * метод получения объекта нашей модели
+     * Метод для получения объекта модели
      * @return void
      */
     public function getModel()
@@ -57,17 +59,17 @@ abstract class Controller
     }
 
     /**
-     * метод получения нашего вида
+     * Метод для получения вида
      * @return void
      */
-    public function getView(): void
+    public function getView()
     {
         $this->view = $this->view ?: $this->route['action'];
         (new View($this->route, $this->layout, $this->view, $this->meta))->render($this->data);
     }
 
     /**
-     * сеттер для данных
+     * Сеттер для данных
      * @param $data
      * @return void
      */
@@ -77,7 +79,7 @@ abstract class Controller
     }
 
     /**
-     * сеттер для метаданных
+     * Сеттер для метаданных страницы
      * @param $title
      * @param $description
      * @param $keywords
@@ -86,9 +88,9 @@ abstract class Controller
     public function setMeta($title = '', $description = '', $keywords = '')
     {
         $this->meta = [
-            'title'=>$title,
-            'description'=>$description,
-            'keywords'=>$keywords
+            'title' => $title,
+            'description' => $description,
+            'keywords' => $keywords
         ];
     }
 }

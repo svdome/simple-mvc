@@ -10,13 +10,11 @@ class FormController extends Controller
     public function authAction()
     {
         $res = R::findAll('names');
-        $data =[];
+        $data = [];
         foreach ($res as $name) {
             $data[$name->id] = $name->name;
         }
-        //debug($data);
-        //die();
         $this->setData($data);
-        $this->setMeta('Форма авторизации', 'Описание страницы формы авторизации', 'Форма, авторизация...');
+        $this->setMeta('Форма авторизации','Описание страницы формы авторизации','Форма, авторизация...');
     }
 }

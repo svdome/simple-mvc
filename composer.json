@@ -1,11 +1,11 @@
 {
   "autoload": {
     "psr-4": {
-      "core\\": "vendor/core",
+      "core\\" : "vendor/core",
       "app\\" : "app"
     }
   },
   "require": {
-  "gabordemooij/redbean": "^5.7.2"
+    "gabordemooij/redbean" : "^5.7.2"
   }
 }

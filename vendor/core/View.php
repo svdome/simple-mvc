@@ -2,13 +2,15 @@
 
 namespace core;
 
+use RedBeanPHP\R;
+
 /**
- *класс вида
+ * Класс вида
  */
 class View
 {
     /**
-     * свойство хранения буферизованного вида
+     * Свойство для хранения буферизированного вида
      * @var string
      */
     public string $content = '';
@@ -26,33 +28,33 @@ class View
         public $meta = [],
     )
     {
-        if(false !== $this->layout) {
+        if (false !== $this->layout) {
             $this->layout = $this->layout ?: LAYOUT;
         }
     }
 
     /**
-     * метод непосредственной отрисовки нашей страницы (шаблон + вид)
+     * Метод для отрисовки страницы (шаблон + вид)
      * @param $data
      * @return void
      * @throws \Exception
      */
-    public function render($data): void
+    public function render($data)
     {
-        if(is_array($data)) {
+        if (is_array($data)) {
             extract($data);
         }
         $prefix = str_replace('\\', '/', $this->route['admin_prefix']);
         $view_file = APP . "/views/{$prefix}{$this->route['controller']}/{$this->view}.php";
-        if(is_file($view_file)) {
-            ob_start(); //буферизация
+        if (is_file($view_file)) {
+            ob_start();
             require_once $view_file;
             $this->content = ob_get_clean();
         } else {
             throw new \Exception("Не найден вид {$view_file}", 500);
         }
 
-        if(false !== $this->layout) {
+        if (false !== $this->layout) {
             $layout_file = APP . "/views/layouts/{$this->layout}.php";
             if (is_file($layout_file)) {
                 require_once $layout_file;
@@ -63,8 +65,8 @@ class View
     }
 
     /**
-     * метод для получения метаданных
-     * @return void
+     * Метод для получения метаданных
+     * @return string
      */
     public function getMeta()
     {
@@ -72,5 +74,39 @@ class View
         $out .= '<meta name="description" content="' . $this->meta['description'] . '">' . PHP_EOL;
         $out .= '<meta name="keywords" content="' . $this->meta['keywords'] . '">' . PHP_EOL;
         return $out;
+    }
+
+    /**
+     * Отлавливает все запросы к базе на текущей странице
+     * @return void
+     */
+    public function getDataBaseLog()
+    {
+        if (DEBUG) {
+            $log = R::getDatabaseAdapter()
+                ->getDatabase()
+                ->getLogger();
+            $logs = array_merge($log->grep('SELECT'), $log->grep('INSERT'), $log->grep('UPDATE'), $log->grep('DELETE'));
+            debug($logs);
+        }
+    }
+
+    /**
+     * Подключает фаил с частью вёрстки
+     * @param $file - путь до файла
+     * @param $data - данные для передачи в файл с вёрсткой
+     * @return void
+     */
+    public function getPart($file, $data = null)
+    {
+        if (is_array($data)) {
+            extract($data);
+        }
+        $file = APP . "/views/{$file}.php";
+        if (is_file($file)) {
+            require $file;
+        } else {
+            echo "File {$file} not found...";
+        }
     }
 }

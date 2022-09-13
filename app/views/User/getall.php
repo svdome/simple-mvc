@@ -1,5 +1,4 @@
 <?php
-foreach ($data as $id =>$name)
-{
+foreach ($data as $id => $name) {
     echo $id . ' => ' . $name . '<br>';
 }

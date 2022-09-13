@@ -1,0 +1,3 @@
+<?= $this->getDataBaseLog(); ?>
+</body>
+</html>

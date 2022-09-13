@@ -1,2 +1,3 @@
 <?php
-echo "User= {$id}" . "name = {$name}";
+
+echo "User = {$id}" . "name = {$name}";

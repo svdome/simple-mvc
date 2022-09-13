@@ -4,7 +4,7 @@ namespace app\controllers;
 
 class TestController
 {
-    public function  testAction()
+    public function testAction()
     {
         echo __METHOD__;
     }

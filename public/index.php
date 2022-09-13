@@ -8,15 +8,4 @@ require_once CONFIG . '/routes.php';
 
 new App();
 
-//var_dump(APP::$app->getProperties());
 
-//echo $noarr['null'];
-
-
-/**
-$test =[
-    'test'=>22,
-    'test2'=>223,
-];
-debug($test);
- */
