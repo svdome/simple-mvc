@@ -98,3 +98,7 @@
 
 [Tuesday 650 of September 2022 07:23:50 PM]Ошибка: Class "RedBeanPHP\R" not found | Файл: C:\OpenServer\domains\simple-mvc\vendor\core\DataBaseConnection.php | Строка 16
 
+[Tuesday 13th of September 2022 11:21:26 AM] Ошибка: Call to a member function getDatabase() on null | Файл: C:\OpenServer\domains\simple-mvc\vendor\core\View.php | Строка: 87
+
+[Tuesday 13th of September 2022 11:55:02 AM] Ошибка: Call to a member function getDatabase() on null | Файл: C:\OpenServer\domains\simple-mvc\vendor\core\View.php | Строка: 87
+
