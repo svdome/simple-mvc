@@ -17,7 +17,7 @@ abstract class Controller
      * Массив с метаданными страницы
      * @var array
      */
-    public array $meta = [];
+    public array $meta = ['title'=>'', 'description'=>'', 'keywords'=>''];
 
     /**
      * Название шаблона страницы

@@ -2,13 +2,11 @@
 
 namespace app\controllers;
 
-use core\Controller;
-
-class MainController extends Controller
+class MainController extends AppController
 {
-    public string $view = 'own';
+
     public function indexAction()
     {
-        $this->setMeta('Стартовая страница','Описание страницы','Страница...');
+
     }
 }
